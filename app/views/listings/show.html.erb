@@ -1,0 +1,10 @@
+<%= render partial: 'showlist' %>
+
+
+<br />
+<% if current_user && current_user.id == @listing.user_id %>
+<%= link_to "edit",edit_listing_path(@listing), method: :get %>
+<%= link_to "delete",listing_path(@listing), method: :destroy %>
+<%end%>
+
+<%= link_to "reserve now", new_listing_reservation_path(@listing,@reservation)%>

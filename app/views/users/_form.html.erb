@@ -1,0 +1,24 @@
+
+<div class="text-field">
+  <%= form.label :name %>
+  <%= form.text_field :name%>
+</div>
+
+<div class="text-field">
+  <%= form.label :email %>
+  <%= form.text_field :email, type: 'email' %>
+</div>
+
+<div class="password-field">
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+</div>
+
+<div class="text-field">
+  <%= form.label :profile_photo %>
+  <%= form.hidden_field :avatar_cache %>
+  <%=form.file_field :avatar %>
+  <%= form.text_field :remote_avatar_url %>
+  <%= form.label :remote_avatar_url, "or image URL" %>
+  <%= form.text_field :remote_avatar_url %>
+</div>
