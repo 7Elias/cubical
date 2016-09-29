@@ -7,7 +7,7 @@
       <li><%= link_to "Home",root_path%></li>
       <% if signed_in? %>
       <li><%= link_to "List new", new_listing_path%> </li>
-      <li><%= link_to "Sign out", sign_out_path, id: "sign_out", method: :delete %></li>
+      <li><%= link_to "Sign out", sign_out_path, id: "sign_out"%></li>
       <li><%=image_tag(current_user.avatar.small_thumb.url)%> </li>
       <% else %>
       <li><%= link_to "Connect with Facebook", "/auth/facebook", id: "sign_in", class:""%></li>
